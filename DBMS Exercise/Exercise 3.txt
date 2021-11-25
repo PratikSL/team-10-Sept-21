@@ -1,0 +1,34 @@
+1)Not possible in MySQL
+
+2)
+select upper(sname) from s;
+
+3)
+select lower(sname) from s;
+
+4)
+select lpad(sname,20,' ') from s;
+
+5)
+select replace(sname,'la','ro') from s;
+
+6)
+select replace(replace(sname,'l','r'),'r','a') from s;
+
+7)
+select sname, length(sname) from from s;
+
+8)
+select sname,case when strcmp(soundex('bloke'),soundex(sname))=0 then 'Match'
+else 'Not match' end from s;
+
+9)
+select sname , 
+case when Status = 10 then 'Ten'
+when status = 20 then 'Twenty'
+when status = 30 then 'Thirty'
+end as status from s;
+
+
+10)
+select dayname(curdate());

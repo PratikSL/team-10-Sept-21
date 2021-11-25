@@ -1,0 +1,31 @@
+1)
+select s.sname , spj.qty from spj , s where `s`.`s#` = `spj`.`s#`;
+
+2)
+select p.pname , spj.qty from spj , p where `p`.`p#` = `spj`.`p#`;
+
+3)
+select j.jname , spj.qty from spj , j where `j`.`j#` = `spj`.`j#`;
+
+4)
+select s.sname ,p.pname ,j.jname , spj.qty from spj ,j,p, s where `s`.`s#` = `spj`.`s#` 
+and `p`.`p#` = `spj`.`p#` and `j`.`j#` = `spj`.`j#`;
+
+5)
+select s.sname ,p.pname from p, s where s.city = p.city;
+
+6)
+select p.pname,spj.qty from spj, p where `p`.`p#` = `spj`.`p#` and p.color = 'red';
+
+7)
+select s.sname,spj.qty from spj, s where `s`.`s#` = `spj`.`s#` and s.status = 20;
+
+8)
+select p.pname,spj.qty from spj, p where `p`.`p#` = `spj`.`p#` and p.Weight > 14;
+
+9)
+select j.jname,j.city from spj, j where `j`.`j#` = `spj`.`j#` and spj.qty > 500;
+
+10)
+select p.pname,spj.qty from spj, p where `p`.`p#` = `spj`.`p#` and p.Weight < 15;
+
